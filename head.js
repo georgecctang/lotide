@@ -9,7 +9,8 @@ const assertEqual = function(actual, expected) {
 
 // function implementation
 const head = function(arr) {
-  if (arr.length === 0) {
+  // return undefined input is empty array or is not an array
+  if (arr.length === 0 || !Array.isArray(arr)) {
     return undefined;
   }
   return arr[0];
@@ -23,3 +24,5 @@ console.log(assertEqual(head(['a','b','c']), 'a'));
 console.log(assertEqual(head([100]), 100));
 // Empty array
 console.log(assertEqual(head([]), undefined));
+// Not an array
+console.log(assertEqual(head('notArray'), undefined));
