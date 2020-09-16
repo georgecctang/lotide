@@ -27,7 +27,7 @@ const findKeyByValue = function(object, value) {
 
 // Test Code
 
-const testObject = { 
+const testObject = {
   text1: 'abc',
   text2: 'def',
   num1: 0,
