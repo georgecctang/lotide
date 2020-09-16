@@ -3,31 +3,31 @@ Create a function to remove items from an array
 */
 
 // eqArrays function from eqArrays.js
-function eqArrays(array1, array2) {
+const eqArrays = function(array1, array2) {
   // check length; if unequal, return false
   if (array1.length !== array2.length) {
     return false;
   }
-  for (i = 0; i < array1.length; i++) {
+  for (let i = 0; i < array1.length; i++) {
     if (array1[i] !== array2[i]) {
       return false;
     }
   }
   return true;
-}
+};
 
 // assertArraysEqual function from assertArraysEqual.js
-function assertArraysEqual(array1, array2) {
+const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
     console.log(`🟢🟢🟢 Assertion Passed: The two arrays are equal.`);
   } else {
     console.log(`❌❌❌ Assertion Failed: The two arrays are not equal.`);
   }
-}
+};
 
 // Function Implementation
-function without(source,itemsToRemove) {
-  // create a new source in 
+const without = function(source,itemsToRemove) {
+  // create a new variable in local scope to prevent overwriting global variable
   source = [...source];
   // loop through the list of items to remove
   for (let i = 0; i < itemsToRemove.length; i++) {
@@ -41,7 +41,7 @@ function without(source,itemsToRemove) {
     }
   }
   return source;
-}
+};
 
 
 // Test Code
