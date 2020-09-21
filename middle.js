@@ -7,10 +7,12 @@ If array length is even, retrun the 2 middle elements
 
 // Function Implementation
 const middle = function(array) {
+  // Return undefined if input is not an array
+  if (!Array.isArray(array)) { return undefined; }
+  
   // Return empty array if array length < 3
-  if (array.length < 3) {
-    return [];
-  }
+  if (array.length < 3) { return []; }
+  
   const isOdd = array.length % 2;
   const middleIndex = (array.length - 1) / 2;
   if (isOdd) {
