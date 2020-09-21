@@ -29,12 +29,14 @@ const eqArrays = function(arr1, arr2) {
   return true;
 }
 
+module.exports = eqArrays;
+
 // Test code
 
-let a1 = [1,2,3,[]];
-let a2 = [1,2,3,[]];
+// let a1 = [1,2,3,[]];
+// let a2 = [1,2,3,[]];
 
-console.log(eqArrays(a1,a2));
+// console.log(eqArrays(a1,a2));
 
 
 
