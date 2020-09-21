@@ -5,13 +5,13 @@ const eqArrays = require('../eqArrays');
 // TEST CODE
 
 // Array with length > 1
-eqArrays(tail([0, 1, 2]), [1, 2]);
+assertEqual(eqArrays(tail([0, 1, 2]), [1, 2]), true);
 
 // Array with length  = 1
-eqArrays(tail([0]), []);
+assertEqual(eqArrays(tail([0]), []), true);
 
 // Array with length  = 0
-eqArrays(tail([]), []);
+assertEqual(eqArrays(tail([]), []), true);
 
 // Wrong input data type (string)
 assertEqual(tail('notArray'), undefined);
