@@ -1,3 +1,7 @@
+/*
+  Print the equality of two primitive data inputs
+*/
+
 // FUNCTION IMPLEMENTATION
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
@@ -7,12 +11,5 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-// Identical strings
-assertEqual("apples", "apples");
-// Non-identical strings
-assertEqual("apples", "oranges");
-// Identical numbers
-assertEqual(1, 1);
-// Non-identical numbers
-assertEqual(1, 2);
+// EXPORT MODULES
+module.exports = assertEqual;

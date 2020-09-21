@@ -52,6 +52,6 @@ cb = (word) => word === 'STOP';
 assertArraysEqual(eqArrays(takeUntil(data, cb),['I','like','pizza']), true);
 
 // Slice array until an even number encountered
-data = [1, 3, 5, 2, 7, 9];
+data = [2, 1, 3, 5, 7, 9];
 cb = (num) => num % 2 === 0;
-assertArraysEqual(eqArrays(takeUntil(data, cb),[1, 3, 5]), true);
+assertArraysEqual(eqArrays(takeUntil(data, cb),[]), true);

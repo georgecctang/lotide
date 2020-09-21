@@ -38,8 +38,8 @@ const eqObjects = function(obj1, obj2) {
 
 // const o1 = {a:1, b:{c:1,d:2,g:{h:1,j:{k:1}}}, e: [1,2,3,[4,5,[6]]]};
 // const o2 = {a:1, b:{c:1,d:2,g:{h:1,j:{k:1}}}, e: [1,2,3,[4,5,[6]]]};
-const o1 = {a:{b:{c:1}},d:{e:1, f:2}};
-const o2 = {a:{b:{c:1}},d:{e:1}};
+const o1 = {a: 1, b:{c:1, d:{e:[[1]]}}, f:[1,2]};
+const o2 = {a: 1, b:{c:1, d:{e:[[1]]}}, f:[1,2]};
 console.log(eqObjects(o1,o2))
 
 
