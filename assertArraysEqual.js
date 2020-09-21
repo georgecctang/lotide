@@ -1,35 +1,35 @@
 /*
-Create a function to assert the equality of two arrays
+  Print the equality of two arrays
 */
 
-// eqArrays functions from eqArrays.js
-const eqArrays = function(array1, array2) {
-  // check length; if unequal, return false
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
-// Function Implementation
+// FUNCTION IMPLEMENTATION
 const assertArraysEqual = function(array1, array2) {
   if (eqArrays(array1, array2)) {
-    console.log(`🟢🟢🟢 Assertion Passed: The two arrays are equal.`);
+    console.log(`🟢🟢🟢 Assertion Passed: ${array1} === ${array2}`);
   } else {
-    console.log(`❌❌❌ Assertion Failed: The two arrays are not equal.`);
+    console.log(`❌❌❌ Assertion Failed: ${array1} !== ${array2}`);
   }
 };
 
-// Test code
-// Strict equal
-assertArraysEqual([1,2,3],[1,2,3]);
-// Not strictly equal
-assertArraysEqual([1,2,3],[1,2,'3']);
-// Not equal
-assertArraysEqual([1,2,3],[1,2,3,4]);
+// TEST CODE
 
+// Equal empty arrays
+assertArraysEqual([],[]);
+// EQUAL unnested arrays
+assertArraysEqual([0,1,2],[0,1,2]);
+// EQUAL nested arrays
+assertArraysEqual([0,1,[2]],[0,1,[2]]);
+
+// EQUAL nested arrays
+assertArraysEqual([0,1,[2,[3]]],[0,1,[2,[3]]]);
+
+// Unequal arrays
+assertArraysEqual([0,1,2],[0,1,2,3]);
+// Unequal arrays
+assertArraysEqual([0,1,2],[0,1,'2']);
+// Unequal nested arrays
+assertArraysEqual([0,1,2],[0,1,[2]]);
+// Unequal nested arrays
+assertArraysEqual([0,1,[2,[3]]],[0,1,[2,3]]);
