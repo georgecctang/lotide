@@ -1,15 +1,10 @@
 /*
-  Create a function that count the occurrence of each letter in a string
+  Return the count of the occurrences of each letter in a string
 */
 
 //Import helper function
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+
+const assertEqual = require('./assertEqual');
 
 // Function Implementation
 
@@ -25,15 +20,17 @@ const countLetters = function(string) {
   return output;
 };
 
-// Test code
-let input = 'hippopotamus';
+module.exports = countLetters;
 
-let result = countLetters(input);
+// // Test code
+// let input = 'hippopotamus';
 
-assertEqual(result.p, 3);
-assertEqual(result.o, 2);
-assertEqual(result.a, 1);
-assertEqual(result.b, undefined);
+// let result = countLetters(input);
 
-// Make sure the input is not changed
-assertEqual(input, 'hippopotamus');
+// assertEqual(result.p, 3);
+// assertEqual(result.o, 2);
+// assertEqual(result.a, 1);
+// assertEqual(result.b, undefined);
+
+// // Make sure the input is not changed
+// assertEqual(input, 'hippopotamus');

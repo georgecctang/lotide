@@ -1,13 +1,13 @@
 /*
-  Flatten a nested array to an array of one level deep
+  Return an unnested array based on a nested input array
 */
 
-function flatten (array) {
+const flatten = function (array) {
   let result = [];
-  (function worker(arr) {
+  (function pushItemsToResult(arr) {
     for (let item of arr) {
       if (Array.isArray(item)) {
-        worker(item);
+        pushItemsToResult(item);
       } else {
         result.push(item);
       }
@@ -16,6 +16,10 @@ function flatten (array) {
   return result;
 }
 
-let arr = [0,[1,[2,3]],[4,5],6,[7,[8,9]]]
-console.log(flatten(arr))
+module.exports= flatten;
+
+// 
+
+// let arr = [0,[1,[2,3]],[4,5],6,[7,[8,9]]]
+// console.log(flatten(arr))
 // => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
