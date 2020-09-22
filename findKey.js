@@ -2,14 +2,14 @@
 Returns the key of the first element callback returns truthy for instead of the element itself.
 */
 
-// Helper Functions
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
+// // Helper Functions
+// const assertEqual = function(actual, expected) {
+//   if (actual === expected) {
+//     console.log(`🟢🟢🟢 Assertion Passed: ${actual} === ${expected}`);
+//   } else {
+//     console.log(`❌❌❌ Assertion Failed: ${actual} !== ${expected}`);
+//   }
+// };
 
 // Function Implementation
 
