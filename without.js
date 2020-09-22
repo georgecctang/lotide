@@ -28,19 +28,25 @@ Create a function to remove items from an array
 // Function Implementation
 
 const without = function(source,itemsToRemove) {
+  
   // create a new variable in local scope to prevent overwriting input source variable
+  
   inputArray = [...source];
   // loop through the list of items to remove
+  
   for (let i = 0; i < itemsToRemove.length; i++) {
     // get the index of items to be removed in source
     let removeIndex = inputArray.indexOf(itemsToRemove[i]);
+  
     // enter while loop if there are items to be removed
     while (removeIndex !== -1) {
-      sourceArray.splice(removeIndex, 1);
+      inputArray.splice(removeIndex, 1);
+  
       // update index
       removeIndex = inputArray.indexOf(itemsToRemove[i]);
     }
   }
+  
   return inputArray;
 };
 
