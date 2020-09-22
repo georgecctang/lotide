@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@georgecctang/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "A mini-clone of the lodash library.",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -12,7 +12,10 @@
     "type": "git",
     "url": "git+https://github.com/georgecctang/lotide.git"
   },
-  "author": "",
+  "author": {
+    "name": "George Tang",
+    "email": "georgecctang@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/georgecctang/lotide/issues"
